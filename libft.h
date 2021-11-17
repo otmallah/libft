@@ -12,8 +12,8 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define SUCCESS 1
-# define FAIL 0
+# define TRUE 1
+# define FALSE 0
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>

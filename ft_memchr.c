@@ -29,17 +29,3 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     int tab[]={1,2,3,1,6,8,9};
-//     int i;
-
-//     i = 3;
-//     ft_memchr(tab, 1 , 8);
-//     while (i < 6)
-//     {
-//         printf("%d\n" , tab[i]);
-//         i++;
-//     }
-// }

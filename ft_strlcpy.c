@@ -32,14 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t maxlen)
 	}
 	return (j);
 }
-
-// int main(void)
-// {
-//     char src[]="salam";
-//     char dest[]="bok";
-
-//     size_t a;
-//     a = ft_strlcpy(dest , src , 3);
-//     printf("%zu" , a);
-//     printf("%s" , dest);
-// }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	first_string(char *str, char const *s)
+static int	first_string(char *str, char const *s)
 {
 	int	i;
 	int	j;
@@ -31,7 +31,7 @@ int	first_string(char *str, char const *s)
 	return (i);
 }
 
-int	end_string(char *str, char const *s)
+static int	end_string(char *str, char const *s)
 {
 	int	i;
 	int	j;
@@ -54,13 +54,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	t_cal	index;
 
-	if (s1 == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	if (s1 != NULL)
 	{
 		index.i = first_string((char *)s1, set);
 		index.j = end_string((char *)s1, set);
-		index.k = index.j - index.i + 1 ;
+		index.k = index.j - index.i + 1;
 		if (index.k < 0)
 			index.k = 0;
 		index.sec = (char *)malloc(sizeof(char) * (index.k + 1));
@@ -77,12 +77,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (index.sec);
 }
-
-// int main(void)
-// {
-//     char str[]="bbcsabacbacalamabc";
-//     char s[]="bca";
-//     char *result;
-//     result = ft_strtrim(str , s);
-//     printf("%s" , result);
-// }

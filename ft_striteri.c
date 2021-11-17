@@ -26,17 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
-
-// int main(void)
-// {
-//     char s[]="salamhhhhhhh";
-
-//     ft_striteri(s , ft_up);
-//     printf("%s" , s);
-// }
-// void	ft_up(unsigned int a, char *str)
-// {
-// 	str[0] = str[0] - 32;
-// 	write(1, str, 1);
-// 	printf(" %d index %s\n" , a , str);
-// }

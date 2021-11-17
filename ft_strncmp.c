@@ -29,12 +29,3 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-//     const char s[]="s\0jsjjsjss";
-//     const char b[]="sal";
-//     int a;
-//     a = ft_strncmp(s , b , 3);
-//     printf("%d" , a);
-// }

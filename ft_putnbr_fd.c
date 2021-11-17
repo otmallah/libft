@@ -33,9 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(t + 48, fd);
 	}
 }
-
-// int main(void)
-// {
-//     int fd;
-//     fd = open("njbgfg" , O_CREAT | O_RDONLY);
-//     ft_putnbr_fd(-2111110 , fd);

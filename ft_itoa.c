@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	convert(int n, char *c, int i)
+static char	convert(int n, char *c, int i)
 {
 	long int	g;
 

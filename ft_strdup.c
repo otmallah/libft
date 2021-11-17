@@ -33,11 +33,3 @@ char	*ft_strdup(const char *str)
 	se[j] = '\0';
 	return (se);
 }
-
-// int main(void)
-// {
-//     char s[]="salm";
-//     char *p;
-//     p = ft_strdup(s);
-//     printf("%s" , p);
-// }

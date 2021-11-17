@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	size(const char	*s, char c)
+static int	size(const char	*s, char c)
 {
 	int	i;
 	int	j;
@@ -25,15 +25,15 @@ int	size(const char	*s, char c)
 		{
 			while (s[i] != c && s[i] != '\0')
 				i++;
-			i--;
 			j++;
+			i--;
 		}
 		i++;
 	}
 	return (j);
 }
 
-void	check_p(const char *st, int num, char sep, char **tab)
+static void	check_p(const char *st, int num, char sep, char **tab)
 {
 	int	start;
 	int	b;
@@ -69,17 +69,3 @@ char	**ft_split(const char *s, char l)
 	check_p(s, num_str, l, tab);
 	return (tab);
 }
-/*int     main(void)
-{
-		char    **c;
-		int        i;
-		const char    t[] = "--1-2--3---n-aqt--5-----42";
-		char    sep = '-';
-		c = ft_split(t, sep);
-		i = 0;
-		while (c[i])
-		{
-				printf("(%s)\n", c[i]);
-				i++;
-		}
-}*/

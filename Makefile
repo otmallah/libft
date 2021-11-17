@@ -1,23 +1,12 @@
 NAME = libft.a
 
-CFLAGS = -Wall -Wextra -Werror
+CC = @gcc -c
 
-RM = rm -f
+CFLAGS = -Wall -Werror -Wextra
 
-CC = @gcc
+AR = ar -rc
 
-AR = ar rc
-
-OBJECT = *.o
-
-# Colors
-C_RED = \033[1;31m
-C_GREEN = \033[1;32m
-C_L_GREEN = \033[1;32m
-C_BLUE = \033[1;34m
-C_L_BLUE = \033[1;34m
-C_WHITE = \033[1;37m
-C_RES = \033[0m
+RM = @rm -f
 
 FILES = ft_isalpha.c\
 		ft_isdigit.c\
@@ -46,55 +35,57 @@ FILES = ft_isalpha.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
 		ft_split.c\
+		ft_itoa.c\
 		ft_strmapi.c\
 		ft_striteri.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c\
-		ft_itoa.c
+		ft_putnbr_fd.c
 
+BS = ft_lstsize_bonus.c\
+		ft_lstnew_bonus.c\
+		ft_lstadd_front_bonus.c\
+		ft_lstadd_back_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstdelone_bonus.c\
+		ft_lstclear_bonus.c\
+		ft_lstiter_bonus.c
 
-BS =	ft_lstsize.c\
-		ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstadd_back.c\
-		ft_lstlast.c\
-		ft_lstdelone.c\
-		ft_lstclear.c\
-		ft_lstiter.c
+# Colors
+C_RED = \033[1;31m
+C_GREEN = \033[1;32m
+C_L_GREEN = \033[1;32m
+C_BLUE = \033[1;34m
+C_L_BLUE = \033[1;34m
+C_WHITE = \033[1;37m
+C_RES = \033[0m
 
-OS = $(subst .c,.o,$(BS))
-
-
-
-
-
-OBJS = $(subst .c,.o,$(FILES))
+OBJS = $(subst .c,.o,$(FILES)) 
+OBJS_B = $(subst .c,.o,$(BS))
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) $(NAME) $(OBJECT)	
-	@echo "$(C_GREEN)[LIBFT CREATED]$(C_RES)"
+	$(CC) $(FLAGS) $(FILES)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "$(C_GREEN)[LIBRARY CREATED!]$(C_RES)"
 
 clean :
-	@$(RM) $(OBJECT)
-	@echo "$(C_L_BLUE)[Objects deleted!]$(C_RES)"
+	$(RM) $(OBJS) $(OBJS_B)
+	@echo "$(C_RED)[OBJECT DELETED!]$(C_RES)"
 
 fclean : clean
-	@$(RM) $(NAME)
-	@echo "$(C_RED)[Removed $(NAME)]$(C_RES)"
+	$(RM) $(NAME)
+	@echo "$(C_RED)[LIBFT.A REMOVED!]$(C_RES)"
 
-bonus: $(OS)
-	 $(AR) $(NAME) $(OBJECT)
-	@echo "$(C_RED)[/~~~\/~~\/~~~\/~~~\/~~\/~~~\                    /~~~\/~~\/~~~\/~~~\/~~\/~~~\
- 					\n| /\/ /\/ /\ || /\/ /\/ /\ |                    | /\ \/\ \/\ || /\ \/\ \/\ |\
-  					\n\ \/ /\/ /\/ /\ \/ /\/ /\/ /     Bonus part     \ \/\ \/\ \/ /\ \/\ \/\ \/ /\
-  					\n\ \/\ \/\ \/  \ \/\ \/\ \/                      \/ /\/ /\/ /  \/ /\/ /\/ /\
-					\n,_/\ \/\ \/\ \__/\ \/\ \/\ \______________________/ /\/ /\/ /\__/ /\/ /\/ /\_,\
-					\n(__/\__/\__/\____/\__/\__/\________________________/\__/\__/\____/\__/\__/\__)]"
+bonus : $(OBJS_B)
 
-re : clean all
-	@echo "$(C_RED)[ Mission Passed!]$(C_RES)"
-	
+$(OBJS_B) : $(BS) 	
+	$(CC) $(FLAGS) $(BS)
+	@$(AR) $(NAME) $(OBJS_B)
+	@echo "$(C_L_BLUE)[BONUS CREATED!]$(C_RES)"
+
+re : fclean all
+
+rebonus : fclean bonus

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-long	ft_check(const char *str, int i, int n)
+static long	ft_check(const char *str, int i, int n)
 {
 	long	number;
 	long	help;

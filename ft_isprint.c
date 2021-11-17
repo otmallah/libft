@@ -15,14 +15,6 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (SUCCESS);
-	return (FAIL);
+		return (TRUE);
+	return (FALSE);
 }
-
-// int main(void)
-// {
-//     if (ft_isprint('*') == SUCCUSS)
-//         printf("ah");
-//     else
-//         printf("la");
-// }

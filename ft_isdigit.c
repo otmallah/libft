@@ -15,12 +15,6 @@
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-		return (SUCCESS);
-	return (FAIL);
+		return (TRUE);
+	return (FALSE);
 }
-
-// int main(void)
-// {
-//     if (ft_isdigit('5') == SUCCUSS)
-//         printf("la");
-// }

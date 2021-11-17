@@ -19,25 +19,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	j;
 
 	j = 0;
+	if (!dest && !src)
+		return (NULL);
+	if ((!dest || !src) && n == 0)
+		return (dest);
 	str1 = (char *)dest;
 	str2 = (char *)src;
-	if (str1 == str2)
-		return (str1);
 	while (j < n)
 	{
 		str1[j] = str2[j];
 		j++;
 	}
-	return (str1);
+	return (dest);
 }
-
-// int main(void)
-// {
-//     int d[]={1,2,3,5,6,9};
-//     int i;
-
-//     i = 0;
-//     ft_memcpy(d, s, 8);
-//     while (i < 8)
-//     printf("%s\n" , d);
-// }

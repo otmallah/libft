@@ -21,22 +21,11 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (st[i])
 	{
-		if (st[i] == (unsigned char)c)
+		if (st[i] == (char)c)
 			return (st + i);
 		i++;
 	}
-	if (st[i] == (unsigned char)c)
+	if (st[i] == (char)c)
 		return (st + i);
-	else
-		return (NULL);
+	return (NULL);
 }
-
-// int main(void)
-// // {
-// //     char s[]="0salam0comkdkg0jhh";
-// //     int c = '0';
-// //     char *result;
-
-// //     result = ft_strchr(s , c);
-// //     printf("%s" , result);
-// // }

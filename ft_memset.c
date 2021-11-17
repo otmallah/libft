@@ -26,14 +26,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-
-// int main(void)
-// {
-//     int s[7]= {2,2,3,1,501};
-//     int i = 0;
-//     ft_memset(s , 1, 4);
-//     while (i < 4)
-//     {
-//         printf("%d\n" ,s[i]);
-//         i++;
-//     }

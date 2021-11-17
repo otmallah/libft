@@ -27,13 +27,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     const char s[]="\0salam.sjbs.cm";
-//     int c = '\0';
-//     char *result;
-
-//     result = ft_strrchr(s , c);
-//     printf("%s" , result);
-// }

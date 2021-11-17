@@ -28,22 +28,8 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 		while (size > 0)
 		{
 			dest1[size -1] = src1[size -1];
-			size --;
+			size--;
 		}
 	}
 	return (dest1);
 }
-
-// int main(void)
-// {
-// 	int s[]={1,2,5,6,6};
-
-// 	int i;
-// 	i = 0;
-// 	memmove(s, s + 1 , 4);
-// 	while (i <= 3)
-// 	{
-// 		printf("%d" , s[i]);
-// 		i++;
-// 	}
-// }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *str1, char *str2)
+static char	*ft_strcat(char *str1, char *str2)
 {
 	int	i;
 	int	j;
@@ -54,12 +54,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strcat(str, (char *)s2);
 	return (str);
 }
-
-// int main(void)
-// {
-//     char s[]="11111 dhdbhdbbvfhbhfbvfhvhbf";
-//     char b[]="00000000000-----*-*";
-//     char *res;
-
-//     printf("%s" ,ft_strjoin(s,b));
-// }

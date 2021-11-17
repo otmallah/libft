@@ -18,10 +18,3 @@ void	ft_putstr_fd(char *str, int fd)
 	if (str)
 		write(fd, str, ft_strlen(str));
 }
-
-// int main(void)
-// {
-//     char s[]="ilyeenr\n\tcnds";
-//     int fd = open("bn", O_RDWR);
-//     ft_putstr_fd(s, fd);
-// }

@@ -15,14 +15,6 @@
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (SUCCESS);
-	return (FAIL);
+		return (TRUE);
+	return (FALSE);
 }
-
-// int main(void)
-// {
-// 	int i;
-
-// 	if (ft_isalpha('5') == SUCCUSS)
-//         printf("is algha");
-// }

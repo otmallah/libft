@@ -37,16 +37,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[j] = '\0';
 	return (res);
 }
-
-// int main(void)
-// {
-//     char s[]="salamm";
-//      char *res;
-//      res = ft_strmapi(s,ft_upp);
-//      printf("%s" , res);
-// }
-// char ft_upp(unsigned int i  , char c)
-// {
-//     printf("%c index %d\n" , c , i);
-//     return c - 32;
-// }

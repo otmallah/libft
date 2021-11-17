@@ -29,15 +29,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-//     int tab[]={1,2,5,8,7,8,7};
-//     int a = 0;
-//     memcmp(tab , tab + 3 , 1);
-//     while (a < 10)
-//     {
-//         printf("%d \n" , tab[a]);
-//         a++;
-//     }
-// }
